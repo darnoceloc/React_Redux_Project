@@ -5,6 +5,13 @@
   "main": "index.js",
   "scripts": {
     "dev": "npx webpack-dev-server --mode development",
+    "dev-web": "npx webpack-dev-server --config ./webpack.config.js --progress",
+    "build": "npx webpack --mode development",
+    "build:ssr": "npx run build:client-and-server-bundles && npx run webpack:server",
+    "serve:ssr": "node dist/server",
+    "webpack:server": "npx webpack --config ./webpack.config.js --progress --colors",
+    "start-hot": "node server.js",
+    "start": "npx webpack-dev-server --content-base public/ --inline --port 3000",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -22,20 +29,26 @@
     "html-webpack-template": "^6.2.0",
     "mini-css-extract-plugin": "^0.9.0",
     "react-hot-loader": "^4.12.20",
+    "react-scripts": "^3.4.1",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.1.3",
+    "typescript": "^3.8.3",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.9.0",
     "@types/react": "^16.9.31",
     "@types/react-redux": "^7.1.7",
     "@types/webpack": "^4.41.10",
+    "chai": "^4.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
     "redux": "^4.0.5",
-    "redux-persist": "^6.0.0"
+    "redux-persist": "^6.0.0",
+    "tslib": "^1.11.1",
+    "tsutils": "^3.17.1"
   }
 }

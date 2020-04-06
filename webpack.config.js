@@ -1,5 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const merge = require('webpack-merge');
+// const common = require('./webpack.config.js');
 
 module.exports = {
     entry: './src/index.js',
@@ -20,16 +23,21 @@ module.exports = {
     },
     resolve: { extensions: ['*', '.js', '.jsx'] },
     output: {
-        path: path.resolve(__dirname, 'dist/'),
-        publicPath: '/dist/',
+        path: path.resolve(__dirname, './dist/'),
+        publicPath: './dist/',
         filename: 'bundle.js'
     },
     devServer: {
-        contentBase: path.join(__dirname, 'public/'),
+        contentBase: path.join(__dirname, './public/'),
         port: 3000,
+        writeToDisk: true,
         publicPath: 'http://localhost:3000/dist/',
         hotOnly: true,
         historyApiFallback: true,
     },
-    plugins: [new webpack.HotModuleReplacementPlugin({template: 'public/index.html'})]
+    plugins: [
+        new HtmlWebpackPlugin(),
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.HotModuleReplacementPlugin({template: './public/index.html'})
+    ]    
 };
