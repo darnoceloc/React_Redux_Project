@@ -1,0 +1,14 @@
+webpackHotUpdate("client",{
+
+/***/ "./src/app.js":
+/*!********************!*\
+  !*** ./src/app.js ***!
+  \********************/
+/*! no exports provided */
+/***/ (function(module, exports) {
+
+eval("throw new Error(\"Module build failed (from ./node_modules/babel-loader/lib/index.js):\\nSyntaxError: /home/darnoc/Documents/Javascript/react_ecosystems/src/app.js: Identifier 'app' has already been declared (21:6)\\n\\n\\u001b[0m \\u001b[90m 19 | \\u001b[39m)\\u001b[33m;\\u001b[39m\\u001b[0m\\n\\u001b[0m \\u001b[90m 20 | \\u001b[39m\\u001b[0m\\n\\u001b[0m\\u001b[31m\\u001b[1m>\\u001b[22m\\u001b[39m\\u001b[90m 21 | \\u001b[39m\\u001b[36mconst\\u001b[39m app \\u001b[33m=\\u001b[39m express()\\u001b[0m\\n\\u001b[0m \\u001b[90m    | \\u001b[39m      \\u001b[31m\\u001b[1m^\\u001b[22m\\u001b[39m\\u001b[0m\\n\\u001b[0m \\u001b[90m 22 | \\u001b[39m\\u001b[0m\\n\\u001b[0m \\u001b[90m 23 | \\u001b[39m\\u001b[90m// Serving static files\\u001b[39m\\u001b[0m\\n\\u001b[0m \\u001b[90m 24 | \\u001b[39mapp\\u001b[33m.\\u001b[39muse(\\u001b[32m'/assets'\\u001b[39m\\u001b[33m,\\u001b[39m express\\u001b[33m.\\u001b[39mstatic(path\\u001b[33m.\\u001b[39mresolve(__dirname\\u001b[33m,\\u001b[39m \\u001b[32m'assets'\\u001b[39m)))\\u001b[33m;\\u001b[39m\\u001b[0m\\n    at Object._raise (/home/darnoc/Documents/Javascript/react_ecosystems/node_modules/@babel/parser/lib/index.js:742:17)\\n    at Object.raiseWithData (/home/darnoc/Documents/Javascript/react_ecosystems/node_modules/@babel/parser/lib/index.js:735:17)\\n    at Object.raise (/home/darnoc/Documents/Javascript/react_ecosystems/node_modules/@babel/parser/lib/index.js:729:17)\\n    at ScopeHandler.checkRedeclarationInScope (/home/darnoc/Documents/Javascript/react_ecosystems/node_modules/@babel/parser/lib/index.js:4769:12)\\n    at ScopeHandler.declareName (/home/darnoc/Documents/Javascript/react_ecosystems/node_modules/@babel/parser/lib/index.js:4735:12)\\n    at Object.checkLVal (/home/darnoc/Documents/Javascript/react_ecosystems/node_modules/@babel/parser/lib/index.js:9207:22)\\n    at Object.parseVarId (/home/darnoc/Documents/Javascript/react_ecosystems/node_modules/@babel/parser/lib/index.js:11762:10)\\n    at Object.parseVar (/home/darnoc/Documents/Javascript/react_ecosystems/node_modules/@babel/parser/lib/index.js:11737:12)\\n    at Object.parseVarStatement (/home/darnoc/Documents/Javascript/react_ecosystems/node_modules/@babel/parser/lib/index.js:11549:10)\\n    at Object.parseStatementContent (/home/darnoc/Documents/Javascript/react_ecosystems/node_modules/@babel/parser/lib/index.js:11148:21)\");\n\n//# sourceURL=webpack:///./src/app.js?");
+
+/***/ })
+
+})

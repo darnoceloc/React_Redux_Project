@@ -2,7 +2,7 @@ import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { Provider } from 'react-redux';
 import configureStore from './redux/configureStore';
-import App from './components/app';
+import App from './App.js';
 
 module.exports = function render(initialState) {
   // Model the initial state  

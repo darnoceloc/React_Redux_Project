@@ -7,6 +7,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: './src/index.js',
     mode: 'development',
+    // entry: {
+    //     client: './src/client.js',
+    //     bundle: './src/bundle.js'
+    //   },
     module: {
         rules: [
             {
@@ -18,17 +22,17 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: ["style-loader", "css-loader"]
-            }
+            },
         ]
     },
-    resolve: { extensions: ['*', '.js', '.jsx'] },
+    resolve: { extensions: ['*', '.js', '.jsx', '.es6'] },
     output: {
-        path: path.resolve(__dirname, './dist/'),
+        path: path.resolve(__dirname, 'output'),
         publicPath: './dist/',
         filename: 'bundle.js'
     },
     devServer: {
-        contentBase: path.join(__dirname, './public/'),
+        contentBase: path.join(__dirname, 'output'),
         port: 3000,
         writeToDisk: true,
         publicPath: 'http://localhost:3000/dist/',
@@ -36,7 +40,11 @@ module.exports = {
         historyApiFallback: true,
     },
     plugins: [
-        new HtmlWebpackPlugin(),
+        new HtmlWebpackPlugin({hash: true,
+            title: 'My Awesome application',
+            myPageHeader: 'Hello World',
+            template: './src/index.html',
+            filename: './dist/index.html'}),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.HotModuleReplacementPlugin({template: './public/index.html'})
     ]    
