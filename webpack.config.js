@@ -1,16 +1,11 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const merge = require('webpack-merge');
-// const common = require('./webpack.config.js');
+
 
 module.exports = {
     entry: './src/index.js',
     mode: 'development',
-    // entry: {
-    //     client: './src/client.js',
-    //     bundle: './src/bundle.js'
-    //   },
     module: {
         rules: [
             {
