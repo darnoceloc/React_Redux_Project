@@ -1,0 +1,183 @@
+#content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.experiences {
+    width: 100%;
+    max-width: 600px;
+}
+
+.experiences-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.tabs {
+    width: 260px;
+    margin-right: 50px;
+}
+
+.tabs p {
+    margin: 0;
+    padding: 12px;
+}
+
+.tabs p {
+    border-left: 2px solid rgb(175, 175, 175);
+}
+
+/* .tabs p:not(.active__tab) {
+    border-left: 2px solid rgb(175, 175, 175);
+} */
+
+
+/* .active__tab {
+    color: blue;
+    border-left: 3px solid blue;
+    background-color: rgb(224, 224, 243);
+} */
+
+.experiences ul {
+    padding: 0;
+    margin: 19px;
+}
+
+.icons {
+    width: 70%;
+    max-width: 500px;
+}
+
+.icons img {
+    width: 100%;
+}
+
+@media (min-width: 1177px) {
+    .icons img {
+        max-width: 400px;
+        float: left;
+    }
+}
+
+@media (max-width: 1176px) {
+    .experiences {
+        margin-top: 32px;
+    }
+}
+
+
+@media (min-width: 960px) and (max-width: 1176px) {
+    .experiences {
+        width: 100%;
+        max-width: 500px;
+        margin-right: 5%;
+    }
+    
+    /* .icon {
+        width: 45%;
+        max-width: 450px;
+        margin-left: 5%;
+    } */
+}
+
+@media (max-width: 959px) {
+    .content {
+        /* flex-direction: column-reverse; */
+    }
+}
+
+@media (max-width: 840px) {
+    .experiences-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tabs {
+        width: 100%;
+        margin-right: 0;
+        display: flex;
+    }
+
+    .tabs p {
+        text-align: center;
+        margin: 0;
+        padding: 12px 16px;
+    }
+
+    .tabs p {
+        border-left: none;
+        border-bottom: 2px solid rgb(175, 175, 175);
+    }
+
+    /* .tabs p:not(.active__tab) {
+        border-left: none;
+        border-bottom: 2px solid rgb(175, 175, 175);
+    } */
+
+    /* .active__tab {
+        color: blue;
+        border-left: none;
+        border-bottom: 3px solid blue;
+        background-color: rgb(224, 224, 243);
+    } */
+}
+
+
+/* #content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.experiences > * {
+    margin-bottom: 32px;
+}
+
+.experiences ul {
+    padding: 0;
+    margin: 19px;
+}
+
+.icon {
+    width: 70%;
+    max-width: 350px;
+}
+
+.icon img {
+    width: 100%;
+    max-width: 350px;
+    margin: 16px auto;
+}
+
+@media (min-width: 960px) and (max-width: 1176px) {
+    .experiences {
+        width: 45%;
+        max-width: 450px;
+        margin-left: 5%;
+    }
+    
+    .icon {
+        width: 45%;
+        max-width: 450px;
+        margin-right: 5%;
+    }
+}
+
+@media (max-width: 959px) {
+    .content {
+        flex-direction: column-reverse;
+    }
+
+    .experiences > * {
+        margin-bottom: 80px;
+    }
+} */

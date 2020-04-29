@@ -1,0 +1,36 @@
+#subheader {
+    margin-bottom: 32px;
+}
+
+#subheader-icon {
+    width: 54px;
+    height: 54px;
+    border: 2px solid #2BB63F;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#subheader-icon img {
+    width: 32px;
+    height: 32px;
+}
+
+#subheader p {
+    font-size: 28px;
+    margin-top: 8px;
+    color: #32325D;
+}
+
+@media (max-width: 1294px) {
+    #subheader-icon {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1176px) {
+    #subheader {
+        text-align: center;
+    }
+}

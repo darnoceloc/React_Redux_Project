@@ -1,0 +1,99 @@
+#navOpen {
+    right: 4.6vw;
+    top: 4.6vw;
+    background-color: #FFF;
+    border: 2px solid rgb(231, 231, 231);
+    border-radius: 8px;
+    position: absolute;
+    display: flex;
+}
+
+#navClose {
+    right: 4.6vw;
+    top: 4.6vw;
+    background-color: #FFF;
+    border: 2px solid rgb(231, 231, 231);
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+}
+
+#navLinks {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    /* background-color: red; */
+}
+
+#toggleButton {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+}
+
+#toggleButton i {
+    font-size: 20px;
+}
+
+
+@media (max-width: 959px) {
+    #navClose #navLinks {
+        display: none;
+    }
+}
+
+@media (min-height: 451px) and (max-width: 959px) {
+    
+    #navClose {
+        height: 40px;
+        width: 40px;
+    }
+
+    #navOpen {
+        height: 40%;
+        width: 50%;
+        max-height: 400px;
+        max-width: 400px;
+        min-height: 380px;
+        min-width: 240px;
+    }
+    
+}
+
+@media screen and (max-height: 450px) {
+
+    #navClose {
+        height: 40px;
+        width: 40px;
+        overflow: hidden;
+    }
+
+    #navOpen {
+        right: 5vw;
+        top: 5vw;
+        height: 75vh;
+        width: 50%;
+        max-height: 80vh;
+        max-width: 400px;
+        min-height: 170px;
+        overflow: hidden;
+    }
+}
+
+
+
+/* @media (max-width: 959px) {
+    #navSections li {
+        display: block;
+        margin: 10% 0;        
+    }
+} */
+
+

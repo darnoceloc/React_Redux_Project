@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <% for(var i=0; i < htmlWebpackPlugin.files.js.length; i++) {%>
+      <script type="text/javascript" src="<%= htmlWebpackPlugin.files.js[i] %>"></script>
+  <% } %>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script src="../index.js"></script>
+    <h1> Conrad Cole : Scientist </h1>
+    <h3>Welcome to the Awesome application</h3>
+    
+    <my-app></my-app>
+
+  </body>
+</html>

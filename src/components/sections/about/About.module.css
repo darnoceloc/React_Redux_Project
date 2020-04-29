@@ -1,0 +1,104 @@
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.details {
+    width: 100%;
+    max-width: 450px;
+}
+
+.details > div {
+    margin: 32px 0;
+}
+
+.skill {
+    text-align: left;
+}
+
+.skills {
+    max-width: 420px;
+    list-style: none;
+    padding: 0;
+    column-count: 2;
+    column-width: 150px;
+    column-fill: balance;
+    /* column-gap: 8px; */
+}
+
+.skills i {
+    margin-right: 8px;
+}
+
+.skills .intro {
+    column-span: all;
+}
+
+.portrait {
+    width: 100%;
+    max-width: 450px;
+    /* position: relative; */
+    bottom: 210px;
+}
+
+.portrait img {
+    width: 100%;
+    margin: 16px auto;
+    /* position: absolute; */
+}
+
+/* .buttons {
+    padding: 0;
+    list-style: none;
+}
+
+.buttons li {
+    display: inline-block;
+    margin: 0 24px 0 0;
+} */
+
+@media (min-width: 960px) and (max-width: 1176px) {
+    .details {
+        width: 45%;
+        max-width: 450px;
+        margin-right: 5%;
+    }
+    
+    .portrait {
+        width: 45%;
+        max-width: 450px;
+        margin-left: 5%;
+    }
+}
+
+@media (max-width: 959px) {
+    .content {
+        flex-direction: column-reverse;
+    }
+
+    .details {
+        text-align: center;
+    }
+
+    /* .buttons li{
+        margin: 0 12px;
+    } */
+
+    .portrait img {
+        width: 80%;
+        max-width: 450px;
+        display: block;
+        /* margin: 16px auto; */
+    }
+    
+}
+
+@media (max-width: 371px) {
+    .skill {
+        text-align: center;
+    }
+}

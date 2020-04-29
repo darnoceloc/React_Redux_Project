@@ -1,0 +1,12 @@
+#button {
+    width: 150px;
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+    background-color: transparent;
+}

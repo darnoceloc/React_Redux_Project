@@ -1,0 +1,151 @@
+/* ====================================
+TOP
+======================================= */
+
+#contact {
+    grid-area: contact;
+}
+
+#contact #socialIcons a {
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    background-color: transparent;
+}
+
+#menu {
+    grid-area: menu;
+    margin: 0 auto;
+}
+
+#menu h4 {
+    margin: 0;
+}
+
+#menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#menu li {
+    margin: 8px 0;
+}
+
+#academic {
+    grid-area: academic;
+}
+
+#top {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "contact menu academic";
+    /* width: 100%; */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+#top img {
+    height: 30px;
+}
+
+#academic {
+    text-align: right;
+}
+
+#academic a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+/* ====================================
+DIVIDER
+======================================= */
+
+#footer hr {
+    max-width: 1200px;
+    margin-top: 48px;
+    opacity: 0.2;
+}
+
+
+/* ====================================
+BOTTOM
+======================================= */
+
+#bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#bottom p {
+    margin-bottom: 0;
+}
+
+#bottom i {
+    color: red;
+    margin: 0 6px;
+    animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat {
+    0% {transform: scale(1);}
+    20% {transform: scale(1.1)} 
+    40% {ransform: scale(1.2)}
+}
+
+
+/* ====================================
+MEDIA QUERRIES
+======================================= */
+
+@media (max-width: 999px) {
+    #top {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+        "contact . menu"
+        "academic academic academic";
+    }
+
+    #academic p {
+        text-align: center;
+    }
+
+    #footer hr {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 449px) {
+    #top {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "contact"
+        "menu"
+        "academic";
+        text-align: center;
+    }
+
+    #menu {
+        text-align: center;
+    }
+
+    #academic p {
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 650px) {
+    #bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}

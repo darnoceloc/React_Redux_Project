@@ -1,0 +1,23 @@
+#interest {
+    margin-bottom: 24px;
+}
+
+#interest h5 {
+    font-size: 18px;
+    margin: 0;
+}
+
+#interest p:first-of-type {
+    font-weight: 500;
+}
+
+.description i {
+    font-size: 20px;
+    margin-right: 16px;
+}
+
+@media (max-width: 1176px) {
+    #interest {
+        text-align: center;
+    }
+}

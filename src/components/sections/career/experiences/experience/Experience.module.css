@@ -1,0 +1,20 @@
+/* #experience {
+    margin: 32px 0;
+} */
+
+#experience h3 {
+    font-size: 19px;
+    margin-top: 10px;
+    margin-bottom: 18px;
+}
+
+#experience p {
+    margin: 0;
+    line-height: 1.2;
+}
+
+@media (max-width: 1176px) {
+    #experience h2 {
+        /* text-align: center; */
+    }
+}

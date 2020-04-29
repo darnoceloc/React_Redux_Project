@@ -1,0 +1,9 @@
+#career > div:nth-child(1) {
+    margin-bottom: 160px;
+}
+
+@media (max-width: 959px) {
+    #career > div:nth-child(1) {
+        margin-bottom: 80px;
+    }
+}

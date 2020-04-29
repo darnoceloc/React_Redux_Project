@@ -1,0 +1,229 @@
+#banner {
+    height: 700px;
+    position: relative;
+    /* background-color: silver; */
+    /* background-image: linear-gradient(185deg, #FFFFFF 52%, #DEDEFD 100%); */
+
+    /* clip-path: polygon(
+        0 0,
+        100% 0,
+        100% calc(100% - 200px),
+        0 100%
+    ); */
+    transform: skew(0deg, -6deg);
+    overflow: hidden;
+    /* border-bottom-left-radius: 50%; */
+}
+
+#banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+    transform: skew(0deg, 6deg);
+    /* background-color: silver; */
+
+    position: absolute;
+    bottom: -120px;
+    left: 0;
+    right: 0;
+}
+
+/* 1240 */
+
+
+/* ===========================================
+Picture Side
+============================================== */
+#picture-side {
+    margin-right: 3%;
+    position: relative;
+}
+
+#picture-side img {
+    width: 94%;
+    max-width: 550px;
+}
+
+
+/* ===========================================
+Text Side
+============================================== */
+#text-side {
+    max-width: 500px;
+    margin-left: 3%;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    /* position: relative; */
+    /* background-color: gray */
+}
+
+#text-side #text-side-content {
+    position: relative;
+    top: -80px;
+}
+
+#text-side h2 {
+    font-size: 34px;
+    font-weight: 600;
+    color: #2C50C7;
+    /* margin: 0; */
+}
+
+#text-side h2 span {
+    color: rgb(66, 66, 66);
+}
+
+#text-side p {
+    font-weight: 400;
+    color: rgb(69, 72, 114);
+    margin: 0;
+}
+
+#contact__button {
+    margin-top: 40px;
+}
+
+/* ===========================================
+Media Querries
+============================================== */
+
+@media (max-width: 1240px) {
+    #banner-content {
+        bottom: calc(1% - 10vw);
+    }
+}
+
+@media (min-width: 960px){
+    #text-side {
+        position: relative;
+        top: -100px;
+        /* background-color: gray */
+    }
+}
+
+@media (min-width: 960px){
+    #text-side {
+        position: relative;
+        top: -100px;
+        /* background-color: gray */
+    }
+}
+
+@media (max-width: 959px){
+    #banner-content {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    #banner-content {
+        bottom: -72px;
+    }
+
+    #picture-side {
+        margin: 48px auto 0 auto;
+    }
+
+    #picture-side img {
+        width: 80%;
+        max-width: 550px;
+    }
+
+    #text-side {
+        width: 80%;
+        align-self: center;
+        margin: 0 auto 48px auto;
+    }
+
+    #text-side #text-side-content {
+        top: 40px;
+    }
+
+    #text-side h2 {
+        line-height: 36px;
+        font-size: 28px;
+        margin: 16px auto;
+    }
+
+    #contact__button {
+        margin-top: 32px;
+    }
+}
+
+@media (max-width: 610px) {
+    #banner {
+        height: 650px;
+    }
+
+    #banner-content {
+        bottom: calc(-30px - 7vw);
+    }
+}
+
+@media (max-width: 520px) {
+    #banner-content {
+        bottom: calc(-25px - 7.5vw);
+    }
+}
+
+@media (max-width: 420px) {
+    #banner {
+        height: 620px;
+    }
+
+    #banner-content {
+        bottom: calc(-21px - 7vw);
+    }
+
+    #text-side {
+        width: 94%;
+    }
+
+    #text-side #text-side-content {
+        top: 20px;
+    }
+
+    #text-side h2 {
+        line-height: 30px;
+        font-size: 22px;
+        margin: 16px auto;
+    }
+
+    #contact__button {
+        margin-top: 32px;
+    }
+    
+}
+
+@media (max-width: 320px) {
+    #banner-content {
+        bottom: calc(-19px - 6.5vw);
+    }
+}
+
+@media (max-width: 280px) {
+    #banner-content {
+        bottom: calc(-20px - 5.5vw);
+    }
+}
+
+
+/* @media (max-width: 609px) {
+    #banner-content {
+        position: absolute;
+        bottom: -12.5vw;
+        left: 0;
+        right: 0;
+    }
+}
+
+@media (min-width: 610px) and (max-width: 3320px) {
+    #banner-content {
+        position: absolute;
+        bottom: calc(-14vw + 22%);
+        left: 0;
+        right: 0;
+    }
+} */

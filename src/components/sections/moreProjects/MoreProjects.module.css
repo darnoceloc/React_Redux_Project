@@ -1,0 +1,42 @@
+.content {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.cards{
+    max-width: 1280px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cards .project {
+    margin: 16px;
+}
+
+#seeMoreButton {
+    color: #103EF6;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 50px;
+    text-align: center;
+    /* text-align: right; */
+    /* margin-right: 6vw; */
+}
+
+#seeMoreButton i {
+    margin-left: 8px;
+}
+
+@media (max-width: 879px) {
+
+    #seeMoreButton {
+        margin-right: 0;
+        text-align: center;
+    }
+}

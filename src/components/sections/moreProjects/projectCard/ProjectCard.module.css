@@ -1,0 +1,68 @@
+.card {
+    max-width: 260px;
+    padding: 40px;
+    border-radius: 16px;
+    background-color: #FFFFFF;
+    border: 1px solid rgb(207, 221, 241);
+    box-shadow: -1px 1px 10px rgb(236, 236, 236);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.card .icon {
+    height: 80px;
+    width: 80px;
+    border-radius: 30%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 241, 224);
+    margin-bottom: 24px;
+}
+
+.card img {
+    width: 50px;
+}
+
+.name, .platform {
+    margin: 0;
+}
+
+.platform {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.description {
+    margin: 24px 0;
+}
+
+.techs {
+    list-style: none;
+    padding: 0;
+}
+
+.techs li {
+    display: inline;
+    font-size: 12px;
+    margin: 0 8px 0 0;
+}
+
+
+.links {
+    margin-top: 32px;
+    text-align: right;
+}
+
+.links i {
+    font-size: 16px;
+    opacity: 0.5;
+    margin-left: 16px;
+}
+
+@media (max-width: 439px) {
+    .card {
+        padding: 20px;
+    }
+}

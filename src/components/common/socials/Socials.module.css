@@ -1,0 +1,66 @@
+.icons {
+    list-style: none;
+    padding: 0;
+}
+
+.icons li {
+    display: inline-block;
+    margin: 0 16px 0 0;
+}
+
+/* Linkedin */
+.icons li:nth-child(1) a {
+    color: #3459F7;
+    border: 2px solid #3459F7;
+    background-color: rgba(52,89,247,0.10);
+}
+.icons li:nth-child(1) a:hover {
+    color: #FFF;
+    background-color: #3459F7;
+}
+
+/* Github */
+.icons li:nth-child(2) a {
+    color: #A567FF;
+    border: 2px solid #A567FF;
+    background-color: rgba(165,103,255,0.10);
+}
+.icons li:nth-child(2) a:hover {
+    color: #FFF;
+    background-color: #A567FF;
+}
+
+/* Instagram */
+.icons li:nth-child(3) a {
+    color: #FF6547;
+    border: 2px solid #FF6547;
+    background-color: rgba(255,101,71,0.10);
+}
+.icons li:nth-child(3) a:hover {
+    color: #FFF;
+    background-color: #FF6547;
+}
+
+/* Twitter */
+.icons li:nth-child(4) a {
+    color: #64BCFF;
+    border: 2px solid #64BCFF;
+    background-color: rgba(100,188,255,0.10);
+}
+.icons li:nth-child(4) a:hover {
+    color: #FFF;
+    background-color: #64BCFF; 
+}
+
+
+@media (max-width: 959px) {
+    .icons li {
+        margin: 0 8px;
+    }
+}
+
+@media (max-width: 310px) {
+    .icons li {
+        margin: 8px;
+    }
+}

@@ -1,0 +1,47 @@
+#navSections {
+    padding: 0;
+    margin: 8px auto;
+    list-style: none;
+}
+
+#navSections li {
+    display: inline-block;
+    margin-right: 32px;
+}
+
+#navSections li a {
+    text-decoration: none;
+    color: #333333;
+}
+
+#navSections li a:hover,
+#navSections li a:active,
+#navSections li a.active {
+    color: #103EF6;
+}
+
+#resumeButton Button {
+    width: 124px;
+    color: #FFFFFF;
+    background-color: #103EF6;
+    border: 2px solid #103EF6;
+    /* background-color: #FD6F21;
+    border: 2px solid #FD6F21; */
+}
+
+@media (max-width: 959px) {
+    #navSections {
+        display: flex;
+        flex-direction: column;
+        /* align-items: center;
+        justify-content: center; */
+    }
+
+    #navSections li {
+        margin: 8% 0;
+    }
+
+    #navSections #resumeButton {
+        margin-top: 28%;
+    }
+}
