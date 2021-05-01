@@ -22,7 +22,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "83705eabbb80e2d3b8b9";
+/******/ 	var hotCurrentHash = "644bf393ca0002d1f83f";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -819,7 +819,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire("./src/index.js")(__webpack_require__.s = "./src/index.js");
+/******/ 	return hotCreateRequire(0)(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -878,6 +878,50 @@ eval("\n\nvar isOldIE = function isOldIE() {\n  var memo;\n  return function mem
 /***/ (function(module, exports) {
 
 eval("module.exports = function(originalModule) {\n\tif (!originalModule.webpackPolyfill) {\n\t\tvar module = Object.create(originalModule);\n\t\t// module.parent = undefined by default\n\t\tif (!module.children) module.children = [];\n\t\tObject.defineProperty(module, \"loaded\", {\n\t\t\tenumerable: true,\n\t\t\tget: function() {\n\t\t\t\treturn module.l;\n\t\t\t}\n\t\t});\n\t\tObject.defineProperty(module, \"id\", {\n\t\t\tenumerable: true,\n\t\t\tget: function() {\n\t\t\t\treturn module.i;\n\t\t\t}\n\t\t});\n\t\tObject.defineProperty(module, \"exports\", {\n\t\t\tenumerable: true\n\t\t});\n\t\tmodule.webpackPolyfill = 1;\n\t}\n\treturn module;\n};\n\n\n//# sourceURL=webpack:///(webpack)/buildin/harmony-module.js?");
+
+/***/ }),
+
+/***/ "./node_modules/webpack/hot/emitter.js":
+/*!********************************!*\
+  !*** (webpack)/hot/emitter.js ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var EventEmitter = __webpack_require__(/*! events */ \"events\");\nmodule.exports = new EventEmitter();\n\n\n//# sourceURL=webpack:///(webpack)/hot/emitter.js?");
+
+/***/ }),
+
+/***/ "./node_modules/webpack/hot/log-apply-result.js":
+/*!*****************************************!*\
+  !*** (webpack)/hot/log-apply-result.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("/*\n\tMIT License http://www.opensource.org/licenses/mit-license.php\n\tAuthor Tobias Koppers @sokra\n*/\nmodule.exports = function(updatedModules, renewedModules) {\n\tvar unacceptedModules = updatedModules.filter(function(moduleId) {\n\t\treturn renewedModules && renewedModules.indexOf(moduleId) < 0;\n\t});\n\tvar log = __webpack_require__(/*! ./log */ \"./node_modules/webpack/hot/log.js\");\n\n\tif (unacceptedModules.length > 0) {\n\t\tlog(\n\t\t\t\"warning\",\n\t\t\t\"[HMR] The following modules couldn't be hot updated: (They would need a full reload!)\"\n\t\t);\n\t\tunacceptedModules.forEach(function(moduleId) {\n\t\t\tlog(\"warning\", \"[HMR]  - \" + moduleId);\n\t\t});\n\t}\n\n\tif (!renewedModules || renewedModules.length === 0) {\n\t\tlog(\"info\", \"[HMR] Nothing hot updated.\");\n\t} else {\n\t\tlog(\"info\", \"[HMR] Updated modules:\");\n\t\trenewedModules.forEach(function(moduleId) {\n\t\t\tif (typeof moduleId === \"string\" && moduleId.indexOf(\"!\") !== -1) {\n\t\t\t\tvar parts = moduleId.split(\"!\");\n\t\t\t\tlog.groupCollapsed(\"info\", \"[HMR]  - \" + parts.pop());\n\t\t\t\tlog(\"info\", \"[HMR]  - \" + moduleId);\n\t\t\t\tlog.groupEnd(\"info\");\n\t\t\t} else {\n\t\t\t\tlog(\"info\", \"[HMR]  - \" + moduleId);\n\t\t\t}\n\t\t});\n\t\tvar numberIds = renewedModules.every(function(moduleId) {\n\t\t\treturn typeof moduleId === \"number\";\n\t\t});\n\t\tif (numberIds)\n\t\t\tlog(\n\t\t\t\t\"info\",\n\t\t\t\t\"[HMR] Consider using the NamedModulesPlugin for module names.\"\n\t\t\t);\n\t}\n};\n\n\n//# sourceURL=webpack:///(webpack)/hot/log-apply-result.js?");
+
+/***/ }),
+
+/***/ "./node_modules/webpack/hot/log.js":
+/*!****************************!*\
+  !*** (webpack)/hot/log.js ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("var logLevel = \"info\";\n\nfunction dummy() {}\n\nfunction shouldLog(level) {\n\tvar shouldLog =\n\t\t(logLevel === \"info\" && level === \"info\") ||\n\t\t([\"info\", \"warning\"].indexOf(logLevel) >= 0 && level === \"warning\") ||\n\t\t([\"info\", \"warning\", \"error\"].indexOf(logLevel) >= 0 && level === \"error\");\n\treturn shouldLog;\n}\n\nfunction logGroup(logFn) {\n\treturn function(level, msg) {\n\t\tif (shouldLog(level)) {\n\t\t\tlogFn(msg);\n\t\t}\n\t};\n}\n\nmodule.exports = function(level, msg) {\n\tif (shouldLog(level)) {\n\t\tif (level === \"info\") {\n\t\t\tconsole.log(msg);\n\t\t} else if (level === \"warning\") {\n\t\t\tconsole.warn(msg);\n\t\t} else if (level === \"error\") {\n\t\t\tconsole.error(msg);\n\t\t}\n\t}\n};\n\n/* eslint-disable node/no-unsupported-features/node-builtins */\nvar group = console.group || dummy;\nvar groupCollapsed = console.groupCollapsed || dummy;\nvar groupEnd = console.groupEnd || dummy;\n/* eslint-enable node/no-unsupported-features/node-builtins */\n\nmodule.exports.group = logGroup(group);\n\nmodule.exports.groupCollapsed = logGroup(groupCollapsed);\n\nmodule.exports.groupEnd = logGroup(groupEnd);\n\nmodule.exports.setLogLevel = function(level) {\n\tlogLevel = level;\n};\n\nmodule.exports.formatError = function(err) {\n\tvar message = err.message;\n\tvar stack = err.stack;\n\tif (!stack) {\n\t\treturn message;\n\t} else if (stack.indexOf(message) < 0) {\n\t\treturn message + \"\\n\" + stack;\n\t} else {\n\t\treturn stack;\n\t}\n};\n\n\n//# sourceURL=webpack:///(webpack)/hot/log.js?");
+
+/***/ }),
+
+/***/ "./node_modules/webpack/hot/only-dev-server.js":
+/*!****************************************!*\
+  !*** (webpack)/hot/only-dev-server.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("/*\n\tMIT License http://www.opensource.org/licenses/mit-license.php\n\tAuthor Tobias Koppers @sokra\n*/\n/*globals __webpack_hash__ */\nif (true) {\n\tvar lastHash;\n\tvar upToDate = function upToDate() {\n\t\treturn lastHash.indexOf(__webpack_require__.h()) >= 0;\n\t};\n\tvar log = __webpack_require__(/*! ./log */ \"./node_modules/webpack/hot/log.js\");\n\tvar check = function check() {\n\t\tmodule.hot\n\t\t\t.check()\n\t\t\t.then(function(updatedModules) {\n\t\t\t\tif (!updatedModules) {\n\t\t\t\t\tlog(\"warning\", \"[HMR] Cannot find update. Need to do a full reload!\");\n\t\t\t\t\tlog(\n\t\t\t\t\t\t\"warning\",\n\t\t\t\t\t\t\"[HMR] (Probably because of restarting the webpack-dev-server)\"\n\t\t\t\t\t);\n\t\t\t\t\treturn;\n\t\t\t\t}\n\n\t\t\t\treturn module.hot\n\t\t\t\t\t.apply({\n\t\t\t\t\t\tignoreUnaccepted: true,\n\t\t\t\t\t\tignoreDeclined: true,\n\t\t\t\t\t\tignoreErrored: true,\n\t\t\t\t\t\tonUnaccepted: function(data) {\n\t\t\t\t\t\t\tlog(\n\t\t\t\t\t\t\t\t\"warning\",\n\t\t\t\t\t\t\t\t\"Ignored an update to unaccepted module \" +\n\t\t\t\t\t\t\t\t\tdata.chain.join(\" -> \")\n\t\t\t\t\t\t\t);\n\t\t\t\t\t\t},\n\t\t\t\t\t\tonDeclined: function(data) {\n\t\t\t\t\t\t\tlog(\n\t\t\t\t\t\t\t\t\"warning\",\n\t\t\t\t\t\t\t\t\"Ignored an update to declined module \" +\n\t\t\t\t\t\t\t\t\tdata.chain.join(\" -> \")\n\t\t\t\t\t\t\t);\n\t\t\t\t\t\t},\n\t\t\t\t\t\tonErrored: function(data) {\n\t\t\t\t\t\t\tlog(\"error\", data.error);\n\t\t\t\t\t\t\tlog(\n\t\t\t\t\t\t\t\t\"warning\",\n\t\t\t\t\t\t\t\t\"Ignored an error while updating module \" +\n\t\t\t\t\t\t\t\t\tdata.moduleId +\n\t\t\t\t\t\t\t\t\t\" (\" +\n\t\t\t\t\t\t\t\t\tdata.type +\n\t\t\t\t\t\t\t\t\t\")\"\n\t\t\t\t\t\t\t);\n\t\t\t\t\t\t}\n\t\t\t\t\t})\n\t\t\t\t\t.then(function(renewedModules) {\n\t\t\t\t\t\tif (!upToDate()) {\n\t\t\t\t\t\t\tcheck();\n\t\t\t\t\t\t}\n\n\t\t\t\t\t\t__webpack_require__(/*! ./log-apply-result */ \"./node_modules/webpack/hot/log-apply-result.js\")(updatedModules, renewedModules);\n\n\t\t\t\t\t\tif (upToDate()) {\n\t\t\t\t\t\t\tlog(\"info\", \"[HMR] App is up to date.\");\n\t\t\t\t\t\t}\n\t\t\t\t\t});\n\t\t\t})\n\t\t\t.catch(function(err) {\n\t\t\t\tvar status = module.hot.status();\n\t\t\t\tif ([\"abort\", \"fail\"].indexOf(status) >= 0) {\n\t\t\t\t\tlog(\n\t\t\t\t\t\t\"warning\",\n\t\t\t\t\t\t\"[HMR] Cannot check for update. Need to do a full reload!\"\n\t\t\t\t\t);\n\t\t\t\t\tlog(\"warning\", \"[HMR] \" + log.formatError(err));\n\t\t\t\t} else {\n\t\t\t\t\tlog(\"warning\", \"[HMR] Update check failed: \" + log.formatError(err));\n\t\t\t\t}\n\t\t\t});\n\t};\n\tvar hotEmitter = __webpack_require__(/*! ./emitter */ \"./node_modules/webpack/hot/emitter.js\");\n\thotEmitter.on(\"webpackHotUpdate\", function(currentHash) {\n\t\tlastHash = currentHash;\n\t\tif (!upToDate()) {\n\t\t\tvar status = module.hot.status();\n\t\t\tif (status === \"idle\") {\n\t\t\t\tlog(\"info\", \"[HMR] Checking for updates on the server...\");\n\t\t\t\tcheck();\n\t\t\t} else if ([\"abort\", \"fail\"].indexOf(status) >= 0) {\n\t\t\t\tlog(\n\t\t\t\t\t\"warning\",\n\t\t\t\t\t\"[HMR] Cannot apply update as a previous update \" +\n\t\t\t\t\t\tstatus +\n\t\t\t\t\t\t\"ed. Need to do a full reload!\"\n\t\t\t\t);\n\t\t\t}\n\t\t}\n\t});\n\tlog(\"info\", \"[HMR] Waiting for update signal from WDS...\");\n} else {}\n\n\n//# sourceURL=webpack:///(webpack)/hot/only-dev-server.js?");
 
 /***/ }),
 
@@ -1035,6 +1079,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
+/***/ 0:
+/*!*************************************************************!*\
+  !*** multi (webpack)/hot/only-dev-server.js ./src/index.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("__webpack_require__(/*! /home/darnoc/Documents/Javascript/React_Redux_Project/node_modules/webpack/hot/only-dev-server.js */\"./node_modules/webpack/hot/only-dev-server.js\");\nmodule.exports = __webpack_require__(/*! ./src/index.js */\"./src/index.js\");\n\n\n//# sourceURL=webpack:///multi_(webpack)/hot/only-dev-server.js_./src/index.js?");
+
+/***/ }),
+
 /***/ "body-parser":
 /*!******************************!*\
   !*** external "body-parser" ***!
@@ -1043,6 +1098,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, exports) {
 
 eval("module.exports = require(\"body-parser\");\n\n//# sourceURL=webpack:///external_%22body-parser%22?");
+
+/***/ }),
+
+/***/ "events":
+/*!*************************!*\
+  !*** external "events" ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"events\");\n\n//# sourceURL=webpack:///external_%22events%22?");
 
 /***/ }),
 
